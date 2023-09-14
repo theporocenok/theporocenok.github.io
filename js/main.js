@@ -1,22 +1,23 @@
 const cases = document.getElementsByClassName('case-info');
-const caseClickHandler = (e) => {
+const tasks = document.getElementsByClassName('task-title');
+const clickHandler = (e) => {
   const parentNode = e.target.parentNode;
 
   parentNode.classList.toggle('opened');
 }
 
 Array.from(cases).forEach(function(caseItem) {
-  caseItem.addEventListener('click', caseClickHandler);
+  caseItem.addEventListener('click', clickHandler);
 });
-
-const tasks = document.getElementsByClassName('task-title');
-const taskClickHandler = (e) => {
-  const parentNode = e.target.parentNode;
-
-  parentNode.classList.toggle('opened');
-}
 
 Array.from(tasks).forEach(function(taskItem) {
-  taskItem.addEventListener('click', taskClickHandler);
+  taskItem.addEventListener('click', clickHandler);
 });
 
+const windowHash = window.location.hash;
+
+if (windowHash.length) {
+  const caseId = windowHash.slice(1);
+
+  document.getElementById(caseId).classList.add('opened');
+}
