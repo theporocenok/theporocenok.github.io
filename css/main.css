@@ -243,6 +243,15 @@ body {
       }
       .achievements {
         font-size: 1.1em;
+
+        & > ul {
+          & > li {
+            &:not(:first-child) {
+              margin-top: 14px;
+            }
+          }
+        }
+
       }
     }
   }
