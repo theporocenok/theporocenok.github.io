@@ -14,10 +14,24 @@ Array.from(tasks).forEach(function(taskItem) {
   taskItem.addEventListener('click', clickHandler);
 });
 
-const windowHash = window.location.hash;
-
-if (windowHash.length) {
-  const caseId = windowHash.slice(1);
+const openCaseById = (caseId) => {
+  Array.from(cases).forEach(function(caseItem) {
+    caseItem.parentNode.classList.remove('opened');
+  });
 
   document.getElementById(caseId).classList.add('opened');
 }
+
+const checkHashAndOpenCase = () => {
+  const windowHash = window.location.hash;
+
+  if (windowHash.length) {
+    const caseId = windowHash.slice(1);
+
+    openCaseById(caseId);
+  }
+}
+
+checkHashAndOpenCase();
+
+window.addEventListener('hashchange', checkHashAndOpenCase);
