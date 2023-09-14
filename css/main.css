@@ -37,7 +37,7 @@ body {
     }
 
     .links {
-      margin-bottom: 48px;
+      margin-bottom: 40px;
       display: flex;
       gap: 42px;
       font-size: 20px;
@@ -59,11 +59,11 @@ body {
     .self-promo {
       font-size: 20px;
       line-height: 26px;
+      margin-bottom: 48px;
     }
 
     .achievements {
       max-width: 350px;
-      margin-top: 40px;
       margin-left: 18px;
 
       & > ul {
@@ -204,9 +204,10 @@ body {
 
 @media only screen and (max-width: 1000px) {
   body {
-    font-size: 1.1em;
+    font-size: 1.06em;
     line-height: 22px;
   }
+
   .container {
     margin: auto;
     padding: 8px 24px 30px 24px;
@@ -229,7 +230,6 @@ body {
       }
       .links {
         gap: 33px;
-        font-size: 1.1em;
         margin-bottom: 24px;
       }
       .photo {
@@ -242,8 +242,6 @@ body {
         margin-bottom: 32px;
       }
       .achievements {
-        font-size: 1.1em;
-
         & > ul {
           & > li {
             &:not(:first-child) {
