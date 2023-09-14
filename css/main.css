@@ -32,7 +32,7 @@ body {
     max-width: 530px;
 
     .title {
-      margin-bottom: 16px;
+      margin-bottom: 24px;
       font-size: 48px;
       font-weight: 500;
     }
@@ -102,7 +102,7 @@ body {
       .case-info {
         display: flex;
         align-items: center;
-        padding: 17px 12px;
+        padding: 21px 17px 16px 12px;
         border-bottom: 1px solid var(--light-gray);
         cursor: pointer;
         user-select: none;
@@ -116,7 +116,7 @@ body {
         }
 
         .nda {
-          margin-left: 16px;
+          margin-left: 18px;
           line-height: 24px;
           padding: 0 12px;
           background-color: var(--light-gray);
@@ -127,6 +127,7 @@ body {
 
         .open-icon {
           margin-left: auto;
+          padding-top: 5px;
 
           & > img {
             transition: transform .2s ease-in-out;
