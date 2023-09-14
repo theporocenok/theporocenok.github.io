@@ -12,7 +12,7 @@
 body {
   background-color: var(--black);
   color: #FBFBFB;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
 }
 
@@ -45,6 +45,10 @@ body {
       & > a {
         color: #5AA6F1;
         text-decoration: none;
+
+        &:hover {
+          color: #2152FD;
+        }
       }
     }
 
@@ -53,8 +57,8 @@ body {
     }
 
     .self-promo {
-      font-size: 24px;
-      line-height: 36px;
+      font-size: 20px;
+      line-height: 26px;
     }
 
     .achievements {
@@ -118,7 +122,6 @@ body {
           text-transform: uppercase;
           border-radius: 8px;
           color: var(--black);
-          font-family: Roboto, 'sans-serif';
         }
 
         .open-icon {
@@ -167,11 +170,14 @@ body {
       &::before {
         position: absolute;
         content: ' ';
-        inset: 0;
+        top: 0;
+        bottom: 0;
         left: -26px;
+        width: 12px;
         background-image: url("../img/task_arrow.svg");
         background-repeat: no-repeat;
         background-position-y: center;
+        transition: transform .2s ease-in-out;
       }
     }
 
@@ -186,6 +192,9 @@ body {
 
 
     &.opened {
+      .task-title::before {
+        transform: rotate(90deg);
+      }
       .task-content {
         display: block;
       }
@@ -195,7 +204,6 @@ body {
 
 @media only screen and (max-width: 1000px) {
   body {
-    font-family: 'Roboto', sans-serif;
     font-size: 1.1em;
     line-height: 22px;
   }
