@@ -295,5 +295,13 @@ body {
 
   .tasks {
     margin-top: 16px;
+
+    .task {
+      .task-content {
+        & > p {
+          line-height: 22px;
+        }
+      }
+    }
   }
 }
