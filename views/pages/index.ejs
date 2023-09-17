@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--   <link rel="stylesheet" href="css/main.css"> -->
+  <link rel="stylesheet" href="css/all_browsers.css">
+  <script src="js/main.js" defer></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="main-info">
+      <div class="content">
+        <h1 class="title">
+          Владислав Тимофеев
+        </h1>
+        <div class="links">
+          <% links.forEach(function(link){ %>
+            <a href="<%=link.href%>"><%=link.title%></a>
+          <% }); %>
+        </div>
+        <div class="photo">
+          <img src="https://fakeimg.pl/499x583" alt="">
+        </div>
+        <div class="self-promo">
+          <%=selfPromo;%>
+        </div>
+        <div class="achievements">
+          <ul>
+              <% achievements.forEach(function(achievement){ %>
+                <li><%=achievement;%></li>
+              <% }); %>
+          </ul>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="https://fakeimg.pl/399x583" alt="">
+      </div>
+    </div>
+    <div class="cases">
+      <div class="title">
+        Кейсы
+      </div>
+      <div class="cases-container">
+        <% cases.forEach(function(singleCase){ %>
+            <%- include('../partials/singleCase.ejs', {singleCase}); %>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

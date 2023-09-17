@@ -1,0 +1,26 @@
+<div class="case" id="<%=singleCase.id;%>">
+  <div class="case-info">
+    <div class="case-name"><%=singleCase.title%></div>
+    <% if (singleCase.nda) { %>
+        <div class="nda">nda</div>
+    <% } %>
+    <div class="open-icon">
+      <img src="img/arrow.svg" alt="">
+    </div>
+  </div>
+  <div class="case-accordion">
+    <%-singleCase.description;%>
+    <% if (singleCase.tasks.length) { %>
+      <div class="tasks">
+        <% singleCase.tasks.forEach(function(task){ %>
+            <div class="task">
+              <div class="task-title"><%=task.title;%></div>
+              <div class="task-content">
+                <%-task.description;%>
+              </div>
+            </div>
+        <% }); %>
+      </div>
+    <% } %>
+  </div>
+</div>
